@@ -1,16 +1,18 @@
 /* Rules for all web pages */
 body {
-    background-color: azure;
+    background-color: #9ba0bc; 
     padding: 10px;
   }
   h1, h2 {
+    color: white;
     margin: 0px;
-    background-color: lightgreen;
+    background-color: #a9ddd6;
     padding: 10px;
     text-align: center;
   }
   p {
-    background-color: hsl(120,80%,90%); /*lighter lightgreen*/
+    color: white;
+    background-color: #c1b8c8; 
     padding: 0px 20px;
     text-align: justify;
   }
@@ -25,9 +27,9 @@ body {
     display: inline-block;
     padding: 0px 4px 2px 4px;
     margin: 2px 4px 2px 4px;
-    background-color: lightgoldenrodyellow;
+    background-color: #9ba0bc;
     border: outset;
-    border-color: lightgreen;
+    border-color: #ffffff;
   }
   nav a {text-decoration: none;}
   
