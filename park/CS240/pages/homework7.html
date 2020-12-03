@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Unit 4 Homework3">
+    <meta name="keywords" content="Unit 4, HTML">
+    <meta name="author" content="Michael Redford">
+    <title>City Area Around Mike's Garage Sale</title>
+</head>
+<link rel="stylesheet" href="css/map.css">
+<style>
+    #figure {
+    position: relative;
+    height: 405px;
+  }
+  #streetMap {
+    position: absolute;
+    top: 0px; left: 0px;
+    width: 350px;
+  }
+  iframe {
+    position: absolute;
+    top: 0px; left: 370px;
+    width: 340px;
+    height: 325px;
+  }
+  figcaption {
+    position: absolute;
+    top: 340px;
+    width: 720px;
+    font-size: small;
+    text-align: justify;
+  }
+  div {
+    width: 360px;
+    padding: 0px 10px;
+    display: table-cell;
+  }
+    .back {background-color: #35393C;}
+    body {
+        padding: 10px;
+    }
+    h1,h2 {
+        margin: 0px;
+        background-color: #42858c;
+        padding: 10px;
+        text-align: center;
+    }
+    h3 {
+        color:#ffffff;
+    }
+    p {
+        background-color: #397367;
+        padding: 5px 20px;
+        text-align: justify;
+        color: #ffffff;
+    }
+    div {
+        color: #ffffff;
+        text-align: justify;
+        font-variant: small-caps;
+    }
+    span.title {font-variant: small-caps;}
+</style>
+<body class="back">
+    <h2>Local Area of Douglasville, GA</h2>
+      <figure id="figure">
+        <img id="streetMap" src=wafflehouse.png
+          alt="Waffle House Photo">
+        <iframe name="photo" src=douglasville.png> </iframe>
+        <figcaption>
+          <div>
+            Waffle House, Inc. is an American restaurant chain with 2,100 locations in 25 states in the United States. 
+            Most of the locations are in the South, where the chain is a regional cultural icon. Waffle House is headquartered in Norcross,
+            Georgia, in the Atlanta metropolitan area.
+          </div>
+          <div>
+            The city of Douglasville is the county seat of Douglas County, Georgia, United States. 
+            As of the 2010 census, the city had a population of 30,961, up from 20,065 in 2000. 
+          </div>
+        </figcaption>
+      </figure>
+    <p>
+        Douglasville is just 26 miles from <span class="title">Atlanta International Airport</span>. It's a growing city and a great area to live. It was where Mike's Garage Sale moved to.
+    </p>
+    <p class="waffle-house">
+        Try a staple of Georgia food. Stop by <span class="title">Waffle House</span> and enjoy a meal!
+    </p>
+    <p class="coke">
+        <span class="title">The World of Coca-Cola</span> is a museum, located in Atlanta, Georgia, showcasing the history of the Coca-Cola Company.
+    </p>
+    <hr>
+    <h3>History</h3>
+    <div>
+        * 2010: Redford's grand opening! <br>
+        * 2015: 5 Year milestone <br>
+        * 2018: Mike's garage sale moved to Texas from Georgia <br>
+        * 2020: 10 year milestone <br>
+      </div>
+</body>
+</html>
