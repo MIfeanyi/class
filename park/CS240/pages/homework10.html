@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Unit 5">
+    <meta name="keywords" content="Homework 9, HTML">
+    <meta name="author" content="Michael Redford">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike’s Garage Sale Profit Estimator</title>
+    <style>
+        p {
+            background-color: #FF82A9;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            font-family: Arial;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+
+        h2 {
+            color: #9da9a0;
+        }
+
+        h3 {
+            background-color: #FF82A9;
+        }
+
+        body {
+            text-align: center;
+            min-width: 500px;
+            font-family: Arial;
+            background-color: #654c4f;
+        }
+
+        form,
+        input:last-child {
+            margin: 10px 20px;
+        }
+
+        /* position the table */
+        .center {
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <script>
+        //vars
+        var basePrice;
+        var percentage;
+        var totalProfit;
+
+        function summary() {
+            var roundProfit = Math.round(totalProfit);
+            var newPercentage = Math.round(Math.random() * 100);
+            alert("Total Profit(Rounded): " + roundProfit + "\n" + "New Percentage: " + newPercentage + "%");
+            form.elements["profit"].value = newPercentage;
+        }
+        function calc(f) {
+            var table;
+            var row;
+            var monthIndex;
+
+            table = document.getElementById("sales");
+            row = table.insertRow(table.rows.length);
+            form = f;
+            row.insertCell(0).innerHTML = "$" + form.elements["price"].value;
+            row.insertCell(1).innerHTML = form.elements["profit"].value + "%";
+            monthIndex = form.elements["months"].selectedIndex;
+            row.insertCell(2).innerHTML = document.getElementsByTagName("option")[monthIndex].innerHTML;
+            row.insertCell(3).innerHTML = form.elements["bulk"].value;
+            row.insertCell(4).innerHTML = "$" + form.elements["bulk"].value * (form.elements["price"].value * (form.elements["profit"].value / 100));
+            basePrice = form.elements["price"].value;
+            percentage = form.elements["profit"].value;
+            totalProfit = form.elements["bulk"].value * (form.elements["price"].value * (form.elements["profit"].value / 100));
+            summary(); //notify user of calculations and updates
+        }
+
+    </script>
+
+<body>
+    <h2>Profit Calculator</h2>
+    <form>
+        Base Price($):
+        <input id="price" type="text" size="5" value="40.00">
+        Ideal Profit(%):
+        <input id="profit" type="text" size="5" value="20"><br>
+        <label for="bulk"> Bulk Being sold (x10,x20,etc.):</label>
+        <input id="bulk" type="text" size="5" value="15"><br>
+        <label for="months">Months product sold:</label>
+        <select id="months" name="months">
+            <option>Jan</option>
+            <option>Feb</option>
+            <option>Mar</option>
+            <option>Apr</option>
+            <option>May</option>
+            <option>Jun</option>
+            <option>Jul</option>
+            <option>Aug</option>
+            <option>Sep</option>
+            <option>Oct</option>
+            <option>Nov</option>
+            <option>Dec</option>
+        </select>
+        <input type="button" value="Calculate" onclick="calc(this.form)">
+    </form>
+    <div class="center">
+        <table id="sales">
+            <tr>
+                <th>Price</th>
+                <th>Profit %</th>
+                <th>Month</th>
+                <th>Quantity</th>
+                <th>Total Earned</th>
+            </tr>
+        </table>
+    </div>
+    <p>
+        *Note: After Submitting profit will randomize.
+        Make sure you update the profit percentage if
+        you want it to stay consistant.
+    </p>
+    <h3>Instructions:</h3>
+    <p>
+        Use this site to calculate your profits in making long term sales. It's important to track
+        overal sales of your item so you can check your budget.
+        Michael Redford's famous garage sale is back! Michael started his
+        yearly yard sale in 2010 and it's still on for 2020!
+        There will be only a limit of 4 people in the garage at a time.
+        A mask and washing your hands are mandatory. No exceptions. Masks will be sold!
+    </p>
+</body>
+</script>
