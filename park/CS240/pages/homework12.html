@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Unit 7">
+    <meta name="keywords" content="Homework 11, HTML">
+    <meta name="author" content="Michael Redford">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike’s Garage Sale Inventory System</title>
+    <style>
+        p {
+            background-color: #5f5aa2;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            font-family: Arial;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+
+        h2 {
+            color: #9da9a0;
+        }
+
+        h3 {
+            background-color: #355691;
+        }
+
+        body {
+            text-align: center;
+            min-width: 500px;
+            font-family: Arial;
+            background-color: #413f54;
+        }
+
+        form,
+        input:last-child {
+            margin: 10px 20px;
+        }
+
+        /* position the table */
+        .center {
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <script>
+        var form;
+        var table;
+        var row;
+        function calc(f) {
+            var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.font = "30px Arial";
+ctx.strokeText("Hello World", 10, 50);
+        }
+
+    </script>
+
+<body>
+    <canvas id="3dtitle"></canvas>
+    <form>
+        Line X:
+        <input id="LineX" type="text" size="5" value="50">
+        Line Y:
+        <input id="LineY" type="text" size="5" value="40.00"><br>
+        <label for="category">Product Category:</label>
+        <select id="category" name="cat">
+            <option>Home</option>
+            <option>Electronics</option>
+            <option>Cooking</option>
+            <option>Home Improvement</option>
+            <option>Video Games</option>
+            <option>Clothing</option>
+            <option>Cameras</option>
+            <option>Movies</option>
+            <option>Food</option>
+        </select><br>
+        <input type="radio" id="add" name="sub" value="add">
+        <label for="add">Add</label><br>
+        <input type="radio" id="delete" name="sub" value="delete">
+        <label for="delete">Delete</label><br>
+
+        <input type="button" value="Submit" onclick="calc(this.form)">
+
+    </form>
+
+    <h3>Instructions:</h3>
+    <p>
+        Use this site to calculate your profits in making long term sales. It's important to track
+        overal sales of your item so you can check your budget.
+        Michael Redford's famous garage sale is back! Michael started his
+        yearly yard sale in 2010 and it's still on for 2020!
+        There will be only a limit of 4 people in the garage at a time.
+        A mask and washing your hands are mandatory. No exceptions. Masks will be sold!
+    </p>
+    <div class="center">
+        <table id="inventory">
+            <tr>
+                <th>Item Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Stock Amount</th>
+
+            </tr>
+        </table>
+    </div>
+    <p>
+        *Note: text is case sensitive. Please ensure case matches when replacing and deleting.
+    </p>
+</body>
+</script>
