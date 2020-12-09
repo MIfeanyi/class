@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="description" content="Unit 7">
-    <meta name="keywords" content="Homework 11, HTML">
+    <meta name="description" content="Unit 8">
+    <meta name="keywords" content="Homework 12, HTML">
     <meta name="author" content="Michael Redford">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mike’s Garage Sale Inventory System</title>
+    <title>Mike’s Surprise</title>
     <style>
         p {
             background-color: #5f5aa2;
@@ -50,68 +50,39 @@
         }
     </style>
     <script>
-        var form;
-        var table;
-        var row;
         function calc(f) {
-            var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.font = "30px Arial";
-ctx.strokeText("Hello World", 10, 50);
-        }
+            var threed = document.getElementById("3dTitle");
+            var td = threed.getContext("2d");
+            td.font = "30px Arial";
+            td.strokeText("Mike's Garage Sale", 10, 50);
 
+            var x = document.getElementById("LineX").value;
+            var y = document.getElementById("LineY").value;
+            var l = document.getElementById("line");
+            var line = l.getContext("2d");
+            line.moveTo(0, 0);
+            line.lineTo(x, y);
+            line.stroke();
+        }
     </script>
 
 <body>
-    <canvas id="3dtitle"></canvas>
+    <canvas id="3dTitle"></canvas>
+    <p>
+        Use the below form to draw a line:
+    </p>
     <form>
         Line X:
         <input id="LineX" type="text" size="5" value="50">
         Line Y:
-        <input id="LineY" type="text" size="5" value="40.00"><br>
-        <label for="category">Product Category:</label>
-        <select id="category" name="cat">
-            <option>Home</option>
-            <option>Electronics</option>
-            <option>Cooking</option>
-            <option>Home Improvement</option>
-            <option>Video Games</option>
-            <option>Clothing</option>
-            <option>Cameras</option>
-            <option>Movies</option>
-            <option>Food</option>
-        </select><br>
-        <input type="radio" id="add" name="sub" value="add">
-        <label for="add">Add</label><br>
-        <input type="radio" id="delete" name="sub" value="delete">
-        <label for="delete">Delete</label><br>
-
+        <input id="LineY" type="text" size="5" value="40"><br>
         <input type="button" value="Submit" onclick="calc(this.form)">
-
     </form>
+    <canvas id="line"></canvas>
 
     <h3>Instructions:</h3>
     <p>
-        Use this site to calculate your profits in making long term sales. It's important to track
-        overal sales of your item so you can check your budget.
-        Michael Redford's famous garage sale is back! Michael started his
-        yearly yard sale in 2010 and it's still on for 2020!
-        There will be only a limit of 4 people in the garage at a time.
-        A mask and washing your hands are mandatory. No exceptions. Masks will be sold!
-    </p>
-    <div class="center">
-        <table id="inventory">
-            <tr>
-                <th>Item Name</th>
-                <th>Price</th>
-                <th>Category</th>
-                <th>Stock Amount</th>
-
-            </tr>
-        </table>
-    </div>
-    <p>
-        *Note: text is case sensitive. Please ensure case matches when replacing and deleting.
+        Click for a Submit for a special message!
     </p>
 </body>
 </script>
